@@ -9,7 +9,7 @@
 <meta name="description" content=" &lt;a href=&#34;https://rainy-lily.lofter.com/&#34; target=&#34;_blank&#34;&gt;@一只小雨莉&lt;/a&gt;的私人停车场/n以斯哈训诫为主，请了解后谨慎食用。
 以斯哈训诫为主，请了解后谨慎食用。">
 <meta name="theme-color" content="#ffa8a8">
-<title>Professor Please Spank Me</title>
+<title>Behind the pain（04） | Professor Please Spank Me</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1618910859981">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -39,6 +39,8 @@
 
 
 
+  <meta name="description" content="Behind the pain（04）" />
+  <meta name="keywords" content="Behind the pain,短篇" />
 </head>
 
 <body>
@@ -316,1060 +318,260 @@
     <div
       class="section-layout pisces ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name">一只小雨莉</p>
-    
-    <div class="site-description right-motion">
-      
-      
-      
-        <p>斯哈训诫文写手</p>
-      
-      
-    </div>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
         
-        <span class="site-item-stat-count">165</span>
-        <span class="site-item-stat-name language" data-lan="article">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">14</span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">14</span>
-        <span class="site-item-stat-name language" data-lan="tag">标签</span>
-      </a>
-    </div>
-  </div>
-  
-    
-  
-  
-    <div class="sidebar-item sidebar-item-social">
-      <div class="social-item">
-        
-          
-            <a href="https://jq.qq.com/?_wv=1027&amp;k=kpOxYk2G">
-              <i class="fa fa-qq" title="QQ聊天灌水群（口令：金色飞贼掉进坩埚里啦）"></i>
-            </a>
-          
-        
-        
-      </div>
-    </div>
-  
 
-
-
-</div>
+<div class="sidebar">
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'pisces';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-        <div class="section-box pisces">
-          <section class="section bg-color posts-expand slide-down-in">
-            
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-fan-wai-yi/">
-      漫无止境的八月（番外一）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:54:12">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>24<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>7071<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>番外一 黑魔法防御课</strong></p>
-<p>“对不起，我迟到了，卢平教授，我——”哈利气喘吁吁的声音哽在了喉咙里——站在黑魔法防御术教室讲台上的并不是莱姆斯，而是他的养父——斯内普。没有什么比在魁地奇比赛的前一天被伍德因为魁地奇的话题纠缠了很久导致上课迟到，而正好站在讲台上的是他最讨厌打破规矩的严厉的养父更糟糕的事情了。</p>
-<p>哈利能感受到全班的目光都因为他的晚到而聚集到他的身上——包括斯内普的。他的麻烦大了，这是哈利此刻脑海里唯一能想到的话。</p>
 
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-fan-wai-yi/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-26/">
-      漫无止境的八月（26）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:53:16">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>15<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4480<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第二十六章 新的开始</strong></p>
-<p>“波特！”斯内普的声音从客厅传来，而哈利却对它充耳不闻，他继续背靠着自己的小床坐在地板上，他上学用的行李箱还像一个小时之前那样摊开在面前，杂物被丢得到处都是。</p>
-<p>“波特。”斯内普出现在了卧室门口，他又叫了一遍哈利，而当他看见了房间里一片狼藉，眉头便再一次皱了起来，“你在做什么？我一个小时之前就叫你收拾行李了，你却把我的房间弄成这样。”</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-26/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-25/">
-      漫无止境的八月（25）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:52:41">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>16<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4522<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第二十五章 父亲</strong></p>
-<p>哈利在椅子上不安地动了动，还有半个小时就要到斯内普规定的睡觉时间了，这便意味着对他的宣判也临近了。他紧张地看了看面前写了只有仅仅几行的检讨书，但是他觉得这不能怪他——下午他在斯内普的工作室处理那些他连名字都叫不上来的材料长达两个小时（这都赶上平时在学校关禁闭的量了）然后他才被放出来去写论文和检讨书。在短短的几个小时内完成一篇论文和一篇检讨书，这是任何一个普通的13岁孩子无论如何也完不成的工作量。</p>
-<p>工作室的门被打开的时候哈利不由地随着【咔哒】一声抖了抖肩膀，他心虚地看着斯内普，虽然确实是他选择斯内普做他的第一监护人的，但是现在他还是怕得浑身发抖。“先生……”</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-25/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-24/">
-      漫无止境的八月（24）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:51:44">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>16<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4531<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第二十四章 异常</strong></p>
-<p>哈利故意在清洗他和斯内普用过的餐盘的时候制造出更多的噪音，那些盘子互相碰撞，发出了骇人的声音。但是没有得到斯内普任何的回应——此时他还是像往常一样，坐在起居室里的沙发上，安静地看着一本书。</p>
-<p>两天了，哈利回到蜘蛛尾巷已经两天了，斯内普和他说的话简直屈指可数——虽然之前斯内普的话也并不多，但是哈利觉得自从他从小天狼星的家里回来之后，斯内普就更加吝啬于和他交流了，这种情况甚至比哈利刚到斯内普家的那几天还要严重。</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-24/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-23/">
-      漫无止境的八月（23）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:51:12">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>13<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>3864<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第二十三章 选择</strong></p>
-<p>在小天狼星家剩下的三天，哈利过得平静而快乐，虽然因为小天狼星和莱姆斯的身体关系，他们没有再玩过扫帚，而是大多数时间都待在了室内，但是哈利却在这段时间里听了很多之前的老故事。</p>
-<p>哈利在莱姆斯不赞成的目光中听了很多关于掠夺者们的故事，还知道了打人柳和尖叫棚屋传说的由来，不禁默默想着怪不得他们和斯内普之间的关系那么差——梅林知道斯内普有多讨厌打破规矩的行为。只要哈利胆敢在斯内普的面前越过那条底线哪怕一个脚趾，他都会为此付出惨痛的代价。但是小天狼星则完全相反——他把他和詹姆一行人的【光荣事迹】当作吹嘘的资本。</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-23/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-22/">
-      漫无止境的八月（22）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:50:44">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>12<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>3508<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第二十二章 特效创伤膏</strong></p>
-<p>邓布利多再次拜访庄园的时候，哈利正在厨房清洗他们晚餐时用过的盘子。小天狼星本不愿意哈利在手臂上还有伤的情况下去做这件事的，但是好在伤的地方位于接近肩膀处，并不容易被水溅到，哈利也觉得应该为小天狼星和莱姆斯做些什么来表达自己的歉意。经过一番僵持之后，小天狼星和莱姆斯终于同意了。</p>
-<p>“很高兴看到你如此充满活力，哈利。”邓布利多心情愉悦地说，“我想等你准备好了，我们就可以出发。”</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-22/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-21/">
-      漫无止境的八月（21）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:49:46">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>14<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4065<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第二十一章 负罪感</strong></p>
-<p>哈利在主卧的门口徘徊了很久，始终没有鼓起勇气敲响房门，他害怕看到他的教父因为他而伤得很严重。他不应该打开房门的，虽然小天狼星没有明确地要求他不能打开房门，但是他清楚这是他对于规矩抱有侥幸心理的缘故——如果是斯内普，他现在一定已经被按在男人的膝盖上教训一顿了。</p>
-<p>哈利再次深深吸了一口气，然后在一番激烈的心理斗争之后终于抬手敲响了小天狼星和莱姆斯的主卧的房门。</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-21/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-20/">
-      漫无止境的八月（20）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:49:09">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>15<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4363<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第二十章 月圆之夜</strong></p>
-<p>哈利趴在自己柔软的大床上，咬着羽毛笔思考着，他想给他的朋友们写信，告诉他们自己的近况——他从斯内普家里搬了出来，住进了教父豪华的房子里。他把羽毛笔的笔尖伸进墨水瓶里蘸了蘸，然后在面前的羊皮纸上写下了：</p>
-<p>/<em>亲爱的</em>/</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-20/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-19/">
-      漫无止境的八月（19）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:48:40">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>13<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>3733<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第十九章 月亮脸和大脚板</strong></p>
-<p>哈利随着小天狼星来到了伦敦郊区的一所房子，这里并不像德思礼家一样位于密集的麻瓜社区，也不像斯内普的家位于阴暗的小巷一角，这是一个蛮大的庄园，拥有自己的花园和水塘，是哈利目前所住过的最好的条件了。</p>
-<p>“你不介意住得离市区远一点吧？哈利？”小天狼星轻轻地捏了捏哈利的肩膀，“虽然我在市中心有套老宅子——我母亲留给我的，但是我并不是很喜欢那里。那里还有一个小精灵，可是我一点也不想见到它，它和我已经过世的母亲一样脑子坏掉了，所以家务的部分估计需要我们自己想办法。”</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-19/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-18/">
-      漫无止境的八月（18）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:46:52">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>14<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>3953<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>第十八章 教父</strong></p>
-<p>“我不写。”哈利坚决地说道，“那不算是我的家庭作业，我要出去玩！”</p>
-<p>“直到你完成它，你才能出去玩，否则你将被永远关在这里。”斯内普也毫不让步，“如果你有怨言，就应该对你昨天晚上的行为进行反思。”</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-18/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
   
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://rainylilysp.github.io/qCO1P-v38/">
+      Behind the pain（04）
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-04-20 17:26:36">2021-04-20</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://rainylilysp.github.io/IUhEofUpV/">
+        <span>Behind the pain</span>
+      </a>、
+      
+      
+      
+      <a href="https://rainylilysp.github.io/jyU69YjU4/">
+        <span>短篇</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>11<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>3226<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/qCO1P-v38/" data-flag-title="Behind the pain（04）" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <p>哈利在痛苦的冷汗中翻了个身，将身上的一块毛毯裹得更紧了。他睡得并不安稳，但还是强迫自己沉入到睡眠之中，以此来逃避残酷的现实。</p>
+<p>即使是夏天，地牢里还是阴冷和潮湿的。身上的这块毛毯是昨晚斯内普和马尔福离开之后由一个小精灵送来的，看得出来，除了那些精神上的凌辱，斯内普并不希望他因为其他原因身体受到伤害。这块毯子虽然不比霍格沃茨的羽毛被，但却足以让哈利在这种阴冷的地方度过夜晚并不会在第二天早上醒来的时候发烧。</p>
+<p>后穴处传来震动的一瞬间，哈利睁开了眼，下意识地掐住了自己大腿根部的皮肉，抵御着那东西的折磨。空荡的地牢里只有哈利一人，但他还是努力咬紧牙关不发出任何声音，他红着眼眶奋力地瞪着天花板，将嘴唇咬在齿尖急促地呼吸，艰难地隐忍着。</p>
+<p>这是早餐之后斯内普塞入他体内的，过程并不算顺利，哈利因为奋力的抵抗而又添了十几道鞭伤，卢修斯·马尔福则得意地目睹了全程。最终哈利被斯内普的束缚咒以一个十分屈辱的姿势固定在地板上，就像第一次被侵犯时一样，斯内普除了大量的润滑并没有费心做任何措施，跳蛋被强行推进哈利的身体时，哈利才发现自己一直用生命守护的尊严早已被当做一个笑话，踩碎在泥土里。</p>
+<p>但是他还是没有哭，他不知道这种折磨还要持续多久，也不知道自己还可以坚持多久，坐在考场里思考问题答案的日子只过去了两天，但对于他来说仿若隔世。</p>
+<p>他不知道自己是否会在这座地牢里度过余生，也不知道邓布利多校长是否正与凤凰社一起商议来救自己的计划，他甚至不确定邓布利多是否一定会来救他。从这个学期一开始，哈利就察觉到邓布利多在躲着他，他不知道为什么，当他与伏地魔之间的链接越来越紧密时，邓布利多做的也只是把他丢给一个食死徒。如果不是他的强烈要求，老校长甚至不愿意把目光停留在他身上哪怕只有一秒钟。</p>
+<p>尾椎骨处传来的快感打断了哈利的思考，自从斯内普早上离开之后，这东西就会每隔一段时间就启动一次，刚开始只是轻微的震动，宛如隔靴搔痒一般扰得哈利没办法自暴自弃地投入睡眠中去，到后来震动的幅度越来越强，而当卢修斯送来晚饭之后，他不得不通过制造肉体上的疼痛来控制自己不要呻吟出声。哈利尝试过想把它取出来，但也许是只有斯内普的魔力才能让它有所反应。</p>
+<p>这次震动比之前的每一次都强烈，无论他如何挣扎变换姿势，那东西都紧紧地抵着哈利最敏感的那一点折磨着。哈利紧紧抓住毛毯，在地板上痛苦地翻了个身，祈祷着这波攻势快点过去。</p>
+<p>然而相比于之前的几次，这次那邪恶的东西看起来根本没有停下的意思，即使哈利想尽一切办法让自己从这种耻辱的快感中摆脱出来，最终他还是感受到小腹处传来了令人恐惧的暖意，他本能地夹紧了双腿，却没料到这更加速了他向顶峰攀登。</p>
+<p>大脑中理智的弦突然崩断，哈利不得不向本能投降，他大脑一片空白地伸出手，握住了自己早已涨大挺立的欲望，想做最后一搏。</p>
+<p>就在这一瞬间一切都消失了，那颗跳蛋就像突然被切断电源一样停止了震动，而哈利的双手也被一股无形的力量拉开固定在了地板上，银蛇环骤然缩紧，毫无心理准备的哈利吃痛地闷哼。</p>
+<p>他没办法到达高潮，又一次地。</p>
+<p>“我想我说过了，你不被允许达到高潮，除非你的表现足够令我满意。”斯内普低沉的声音在哈利的上方响起。</p>
+<p>哈利不知道斯内普什么时候进来的，但这一切让他明白了，他的一切行动都在严密的监视之下，此刻他遭受痛苦，而其他人则以此为乐。他闭上眼平躺在地板上，虽然身体因为刚才的种种还燥热着，可哈利此刻却感到寒冷刺骨。</p>
+<p>“看来我们的救世主也会有所诉求，我还以为他要保持一副不食人间烟火的姿态过一辈子呢。”卢修斯轻笑一声，用手杖的杖尖戳了戳哈利的小腹，哈利因此本能地退缩。</p>
+<p>“卢修斯。”斯内普低声警告道，“他现在是我的人。”</p>
+<p>“哦是的，当然。”卢修斯向斯内普投去不满的一瞥，“不能碰他，但在你外出的时候还要伺候他的饮食起居，多么令人满意的活啊。”</p>
+<p>“你不必这么费心，黑魔王让你照看他，并没有让你时时刻刻守在他身边，你一定有比这更重要的事情来做。”斯内普蹲下身，一把掀开了哈利身上裹着的毯子，不顾哈利的抵抗一把捉住哈利的下身检查起来，粗暴地动作让哈利忍不住疼得吸了一口气。“这是什么？你这淫荡的小子。”</p>
+<p>斯内普把手指举到了哈利面前，上面沾着一些哈利欲望顶端渗出的晶莹的前液。</p>
+<p>哈利狠狠咬住嘴唇，在内心唾弃着在欲望下缴械投降的自己。</p>
+<p>“求我吧，波特。”斯内普扬起一个得意的笑容，“只要你说出【请】，我就会给你，总是这样你会生病的。”他摆出一副假惺惺的怜悯姿态，发出【啧啧】的声音。</p>
+<p>“请。”哈利怒视着斯内普，并对着他的脸啐了一口，“请你杀了我。”</p>
+<p>“贪心不足的小子，”斯内普随意地抹去脸上溅到的唾液，拉扯着他的头发强迫他坐起来，“我有没有告诉过你，我想得到你这毫无遮拦的小嘴很久了？”</p>
+<p>哈利因斯内普的拉扯感到疼痛，他没有答话，虽然他至此只拥有过一段短暂而纯洁的初恋，但他作为一个已经15岁的男孩不可能猜不到斯内普的意图。</p>
+<p>巨大的阳具在掐在下颌处的手指的配合下硬是闯进了哈利的口腔，一股独属于成熟男性的强烈气味令哈利感到眩晕和作呕。他本能地想后退，却又被斯内普扣住后脑无处可逃。</p>
+<p>“小心点，小猫。”斯内普在他的脸颊上不轻不重地拍了两下警告道，“收起你的牙齿，如果你胆敢伤到我，我会让你知道现在的我是多么的仁慈。”</p>
+<p>哈利并不畏惧斯内普的威胁——他已然置身于深渊了，害怕陷得更深吗？只是斯内普的动作太过于野蛮，硕大而炙热的凶器每一下都顶入哈利的喉咙，令他无法控制地感到恶心，每当他想发力咬伤斯内普时，对方就像完全洞悉他意图般地狠狠顶入最深处，所有的力量都被强势的进攻驱散，到头来只能默默地含着被逼出来的生理泪水承受着。</p>
+<p>“我喜欢你这副样子，波特。”斯内普一边在哈利的口腔里肆虐，一边低头仔细端详他的脸，“一副受尽了委屈的模样，令人忍不住想要将你摧毁——这总比你扬着鼻子在我的课堂上乱出风头强太多了。”</p>
+<p>哈利的怒吼被斯内普全数堵在了喉咙里，与此同时后穴里的那颗跳蛋又开始作恶了。</p>
+<p>在这种双重攻击下，哈利的大脑再一次罢了工，意识被剥离，恍惚间似乎不再有痛苦与折磨，此时他站在一个第三者的角度，冷眼看着跪坐在地上被自己教授当做泄欲玩具一样蹂躏的男孩，内心却没有丝毫的波澜。</p>
+<p>漫长的一段连氧气都无法正常汲取的折磨之后，哈利听到斯内普低吼了一声，猛地将哈利按在他跳动的阴茎上，一股温热的液体被射入了哈利的喉咙。</p>
+<p>“咳——咳咳——！”痛苦的呛水感残酷地将哈利的意识强行拉回，他挣脱了斯内普的控制倒在地上猛烈地咳嗽，那些乳白色的液体混合着哈利自己的津液被吐在了地板上，但后穴里的快感却不降反升，引得哈利呜咽着蜷缩起身体。</p>
+<p>“你的表现超出预期，波特。”斯内普在哈利已被冷汗打湿的头发里揉了一把，夸赞道，“作为奖励，我可以赐予一些你想要的。”</p>
+<p>“放开我。”哈利在被斯内普掰过肩膀按在地上时用尽最后一点力气吼道。</p>
+<p>而斯内普对此置若罔闻，他的手敷上了哈利痛苦不堪的欲望，颇有技巧地爱抚着。</p>
+<p>此时此刻发生的所有一切，对于一个未经人事的15岁少年来说无疑都是无力抵抗的。和上次一样，不多久哈利的喘息声就转向了悲鸣。</p>
+<p>“说【请】，男孩。”斯内普恶魔般低沉的声音在他的耳边轻语，“我会给你你想要的。这并不难，只需要你说【请】。”</p>
+<p>哈利所有的坚持、所有的傲气都在这一系列折磨里被逼得节节败退，他再次攀上顶峰，却仍旧无法达到高潮。</p>
+<p>“……请！”最后的声音转为了尖叫，他放弃了一切尊严和过往，狼狈不堪地求饶。“请！先生！”</p>
+<p>紧束在龟头下方的银蛇环松开力道时，疼痛和快感同时袭击了哈利，他闭着眼睛用鼻腔哀叫，身体以一种极限的角度反攻着到达了高潮，他抽搐着释放，在他最憎恨的人面前。</p>
+<p>高潮过后无助且尖锐的喘息，宛如受伤小兽最后的悲鸣。</p>
+<p>“多美的一幕。”卢修斯感叹道，“我已经开始期待你一个月之后的成果了，西弗勒斯。”</p>
+<p>“黑魔王会满意的，我保证。”斯内普的语调恢复了平静，干净利落地施了几个情节咒收拾残局。“在这之前我们得【照顾】好我们的小救世主。”</p>
+<p>“那是当然。”卢修斯附和，“照你的要求我给了他这条毯子，这可比小精灵们的待遇好多了。”</p>
+<p>“我不得不赞同你的说法，卢修斯。”斯内普重新检查了一下哈利的状态，确保他没有受到真正严重的伤，而过程中哈利就像一个毫无生命的橡胶躯体一样任由斯内普摆布。“但恐怕你得多给他点吃的，如果你不想他在一周之内就饿死的话。”</p>
+<p>“他吃得可比小精灵吃得多多了。”卢修斯不满地冷哼了一声。</p>
+<p>“没错，”斯内普完成了检查，然后后退了一步站起身，“但他的作用也比小精灵大多了不是吗？如果他的体重再掉下去，我只能给他灌营养魔药来维持了，我不想这么做，因为那得消耗我更多的精力和金钱。”</p>
+<p>“好吧，我会通知小精灵增加一些餐量。”卢修斯妥协道。</p>
+<p>“很好。”斯内普心不在焉地应和道，伸出脚用鞋尖挑起哈利的侧脸，“那么，明天见了？pet？”</p>
+<p>两人说着不温不火的客套话离开了地窖，良久，哈利翻了个身，重新看向昏暗的天花板。一滴眼泪安静地从眼角滑落，没入了黑色凌乱的发丝中。</p>
+
+            </div>
             
             
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-      <li class="pagination-dir">
-        <a href="https://rainylilysp.github.io/page/9/">
-          <i class="fa fa-angle-left"></i>
-        </a>
-      </li>
-    
-    
-      <!-- 1 2 3 4 ... N -->
-      
-        <li class="pagination-li">
-          <a href="/">1</a>
-        </li>
-        <li class="pagination-li">
-          …
-        </li>
-        <li class="pagination-li">
-          <a href="/page/9">9</a>
-        </li>
-        <li class="pagination-li pagination-active">
-          <a href="/page/10">10</a>
-        </li>
-        <li class="pagination-li">
-          <a href="/page/11">11</a>
-        </li>
-        <li class="pagination-li">
-          …
-        </li>
-        <li class="pagination-li">
-          <a href="/page/17">17</a>
-        </li>
-      
-    
-    
-      <li class="pagination-dir">
-        <a href="/page/11">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </li>
-    
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      一只小雨莉
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://rainylilysp.github.io/qCO1P-v38/" title="Behind the pain（04）">https://rainylilysp.github.io/qCO1P-v38/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
   </ul>
+  <div class="tags">
+    
+      <a href="https://rainylilysp.github.io/IUhEofUpV/"># Behind the pain</a>
+    
+      <a href="https://rainylilysp.github.io/jyU69YjU4/"># 短篇</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="Behind the pain（03）" href="https://rainylilysp.github.io/NFE63LgK0/">Behind the pain（03）</a>
+        <a class="nav-mobile-next" title="Behind the pain（03）" href="https://rainylilysp.github.io/NFE63LgK0/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
 </div>
-          </section>
+            
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -1576,6 +778,235 @@
     parent.insertBefore(aelem, next);
   })
 </script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+            <img id="zfb" class="reward-img" src="\media\images\custom-zfbImg.JPG" alt="赞赏码">
+          
+          
+            <img id="wx" class="reward-img" src="\media\images\custom-wxImg.JPG" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      <div id="zfbBtn" class="pay-text">
+        支付宝
+      </div>
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -19429,7 +18860,6 @@
 
 
 <script src="/media/js/mouse/love.js"></script>
-
 
 
 
