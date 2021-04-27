@@ -9,7 +9,7 @@
 <meta name="description" content=" &lt;a href=&#34;https://rainy-lily.lofter.com/&#34; target=&#34;_blank&#34;&gt;@一只小雨莉&lt;/a&gt;的私人停车场/n以斯哈训诫为主，请了解后谨慎食用。
 以斯哈训诫为主，请了解后谨慎食用。">
 <meta name="theme-color" content="#ffa8a8">
-<title>Professor Please Spank Me</title>
+<title>黑白囹圄（番外1-5） | Professor Please Spank Me</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1619494515702">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -39,6 +39,8 @@
 
 
 
+  <meta name="description" content="黑白囹圄（番外1-5）" />
+  <meta name="keywords" content="黑白囹圄,短篇" />
 </head>
 
 <body>
@@ -314,1297 +316,229 @@
   <div class="main-continer">
     
     <div
-      class="section-layout  pisces">
+      class="section-layout pisces ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name">一只小雨莉</p>
-    
-    <div class="site-description right-motion">
-      
-      
-      
-        <p>斯哈训诫文写手</p>
-      
-      
-    </div>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
         
-        <span class="site-item-stat-count">173</span>
-        <span class="site-item-stat-name language" data-lan="article">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">14</span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">14</span>
-        <span class="site-item-stat-name language" data-lan="tag">标签</span>
-      </a>
-    </div>
-  </div>
-  
-    
-  
-  
-    <div class="sidebar-item sidebar-item-social">
-      <div class="social-item">
-        
-          
-            <a href="https://jq.qq.com/?_wv=1027&amp;k=kpOxYk2G">
-              <i class="fa fa-qq" title="QQ聊天灌水群（口令：金色飞贼掉进坩埚里啦）"></i>
-            </a>
-          
-        
-        
-      </div>
-    </div>
-  
 
-
-
-</div>
+<div class="sidebar">
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'pisces';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-        <div class="section-box tag-line box-shadow-wrapper">
-          <section class="section tags-section posts-expand bg-color">
-            <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          住在隔壁的黑先生
-          <small class="language" data-lan="tag">标签</small>
-        </h2>
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-17/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（17）</small>
-            </h1>
-          </div>
-        </div>
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://rainylilysp.github.io/-A-aKwpBT/">
+      黑白囹圄（番外1-5）
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-04-27 11:34:46">2021-04-27</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://rainylilysp.github.io/U_iP1oMjL/">
+        <span>黑白囹圄</span>
+      </a>、
+      
+      
+      
+      <a href="https://rainylilysp.github.io/jyU69YjU4/">
+        <span>短篇</span>
       </a>
       
       
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-16/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（16）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-15/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（15）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-14/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（14）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-13/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（13）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-12/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（12）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-11/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（11）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-10/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（10）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-09/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（09）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-08/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（08）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-07/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（07）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-06/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（06）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-05/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（05）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-04/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（04）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-03/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（03）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-02/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（02）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://rainylilysp.github.io/zhu-zai-ge-bi-de-hei-xian-sheng-01/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              04-13
-              <small>住在隔壁的黑先生（01）</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>5<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1425<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/-A-aKwpBT/" data-flag-title="黑白囹圄（番外1-5）" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <p>斯内普走进来的时候哈利正趴在自己的小床上皱着眉研究自己的试卷，一条凉被盖在他的下半身，从一定程度上缓解了他的窘迫。</p>
+<p>“你这样会伤到眼睛的。”斯内普一边提醒一边把一杯热牛奶放在了床头的矮柜上，低头看着咬着笔尾的男孩。“为什么不去桌子上看？”</p>
+<p>“我可不想跪着看书，”哈利动了动从小床上撑起身，这个动作牵扯到了他红肿的身后，不禁痛得吸气，但一些青春期男孩无关痛痒的自尊心让他不想像个懦弱的孩子一样对造成这一切的斯内普唯唯诺诺，于是他咬了咬牙，装作什么事都没有发生一样，欲盖弥彰地眨了眨尚且红肿的双眼，看向斯内普。“我看不懂，先生，请你为我讲解得更透彻些。”</p>
+<p>“你没必要装作一副受害者的样子，波特先生。”斯内普抱起双臂并不吃哈利这一套，“我说过让你休息，就是字面上的意思，就算你想让自己的处境看起来更加可怜来唤起我的同情心，我也只能告诉你，那是徒劳的。明天你有大把的时间来研究那些题目，而不是趁着睡觉之前这点可怜的时间来装模作样。”</p>
+<p>被无情拆穿的哈利不情愿地扁了扁嘴，拿起床头的玻璃杯凑在鼻子前闻了闻，随即皱起了鼻子，“我不是一个小孩子了，没必要在睡觉前喝这种东西。”</p>
+<p>“这取决于你自己。”斯内普并不在意哈利的抗议，他在哈利的床边坐下，抽走了哈利的试卷，上面已经在白天早些时间被西弗勒斯用红笔订正过了，只是即使是标准答案，对于基础知识薄弱的哈利也很难看懂。“是睡觉的时间了，从今天开始你要严格遵循我给你制定的计划作息。”</p>
+<p>哈利没有反驳，他轻哼了一声，倒也不打算再假装用功，他放松自己倒在了干净柔软的枕头上略带慵懒地伸展了一下四肢，无论如何，他都是感激斯内普的，即使他总是表现得那么严厉，但他给了哈利想都不敢想的生活。哈利把脸埋进枕头里，不想让对方察觉自己的脸红。</p>
+<p>大掌隔着薄被覆在哈利身后的时候他不由得绷紧了神经，那里本不应该像早晨时那样疼得厉害了，但是就在刚才，斯内普又以他进度缓慢为由执行了晚上的另外30下巴掌。一天挨两次打的待遇即使在监狱里哈利都没有受到过，而一想到接下来的一周甚至更久，他都要在斯内普的巴掌下度过，哈利不由得叹了一口气。</p>
+<p>斯内普似乎被他的反应逗笑了，他哼了一声，带着些许揶揄。“这比监狱藤条和木桨还难以忍受？你可是无论如何也不愿开口的那个倔强的男孩，反倒是几下巴掌就能让你在我的膝盖上哭得像个5岁的孩子一般。”</p>
+<p>“这不一样。”哈利埋在枕头里闷闷地说，他不想让斯内普知道在狱中和现在他的心境到底发生了多么巨大的变化，但这种变化真实存在——他不再对斯内普抱有畏惧和试探，开始变得有些恃宠而骄，也许正因为这几个月平安无事的朝夕相处。</p>
+<p>“好了，是时候睡觉了。”斯内普拍了拍哈利没伤着的后腰，“顺便一提，明天开始你不用再操持家务，我请了一位专门的人来负责这些，但这不意味着你可以睡到日晒三竿了再起床，你需要和我一起出门晨练，早餐结束之后我们还会关于当天的学习计划进行讨论。”</p>
+<p>哈利可不认同斯内普的用词，【讨论】的形式也许只有斯内普说他听的份，并且极有可能是以哈利保持着被压在斯内普膝盖上的姿势进行的。</p>
+<p>“我会努力完成你布置的任务，先生。”哈利不甘心地说，“但你没必要禁止我去罗恩家，我好不容易才有了朋友。”</p>
+<p>“你要知道这一切都是你一手造成的，波特。”斯内普摇了摇头拒绝道，“你告诉我你会去学习，我才默许你每天出门，但从结果上看，这是一个愚蠢的主意。我不会阻止你交朋友，但如果这严重影响到了你的学业，我只能禁止你们见面直到你通过考试。”</p>
+<p>哈利扁了扁嘴，但也没什么立场反驳男人。斯内普在身后的轻揉让他开始有点昏昏欲睡了，“……先生？”哈利带着睡意模糊地问，“如果我通过考试，你能答应我一个要求吗？”</p>
+<p>“虽然以现在的情况来看，你通过考试的几率几乎为零，但是我还是想先听听是什么样无理的要求让你从冬天起到现在都如此执着。”</p>
+<p>哈利扯了扯嘴角，露出了一个略带幸福的微笑，“并不是什么大不了的，你可以称我为哈利吗？”</p>
+
+            </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      一只小雨莉
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://rainylilysp.github.io/-A-aKwpBT/" title="黑白囹圄（番外1-5）">https://rainylilysp.github.io/-A-aKwpBT/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://rainylilysp.github.io/U_iP1oMjL/"># 黑白囹圄</a>
+    
+      <a href="https://rainylilysp.github.io/jyU69YjU4/"># 短篇</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="Behind the pain（07）" href="https://rainylilysp.github.io/R3YCxiBGP/">Behind the pain（07）</a>
+        <a class="nav-mobile-next" title="Behind the pain（07）" href="https://rainylilysp.github.io/R3YCxiBGP/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-          </section>
+            
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -1811,6 +745,235 @@
     parent.insertBefore(aelem, next);
   })
 </script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+            <img id="zfb" class="reward-img" src="\media\images\custom-zfbImg.JPG" alt="赞赏码">
+          
+          
+            <img id="wx" class="reward-img" src="\media\images\custom-wxImg.JPG" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      <div id="zfbBtn" class="pay-text">
+        支付宝
+      </div>
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -19973,7 +19136,6 @@
 
 
 <script src="/media/js/mouse/love.js"></script>
-
 
 
 
