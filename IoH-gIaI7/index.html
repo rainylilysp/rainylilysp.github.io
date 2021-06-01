@@ -9,7 +9,7 @@
 <meta name="description" content=" &lt;a href=&#34;https://rainy-lily.lofter.com/&#34; target=&#34;_blank&#34;&gt;@一只小雨莉&lt;/a&gt;的私人停车场/n以斯哈训诫为主，请了解后谨慎食用。
 以斯哈训诫为主，请了解后谨慎食用。">
 <meta name="theme-color" content="#ffa8a8">
-<title>Professor Please Spank Me</title>
+<title>Behind the pain（14） | Professor Please Spank Me</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1622566243567">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -39,6 +39,8 @@
 
 
 
+  <meta name="description" content="Behind the pain（14）" />
+  <meta name="keywords" content="Behind the pain,短篇" />
 </head>
 
 <body>
@@ -342,89 +344,94 @@
     <div
       class="section-layout pisces ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name">一只小雨莉</p>
-    
-    <div class="site-description right-motion">
-      
-      
-      
-        <p>斯哈训诫文写手</p>
-      
-      
-    </div>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
         
-        <span class="site-item-stat-count">190</span>
-        <span class="site-item-stat-name language" data-lan="article">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">17</span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">17</span>
-        <span class="site-item-stat-name language" data-lan="tag">标签</span>
-      </a>
-    </div>
-  </div>
-  
-    
-  
-  
-    <div class="sidebar-item sidebar-item-social">
-      <div class="social-item">
-        
-          
-            <a href="https://jq.qq.com/?_wv=1027&amp;k=kpOxYk2G">
-              <i class="fa fa-qq" title="QQ聊天灌水群（口令：金色飞贼掉进坩埚里啦）"></i>
-            </a>
-          
-        
-        
-      </div>
-    </div>
-  
 
-
-
-</div>
+<div class="sidebar">
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'pisces';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-        <div class="section-box pisces">
-          <section class="section bg-color posts-expand slide-down-in">
-            
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/naughty-boytao-qi-de-nan-hai/">
-       Naughty boy（淘气的男孩）
+    <a class="post-title-link" href="https://rainylilysp.github.io/IoH-gIaI7/">
+      Behind the pain（14）
     </a>
   </h1>
   <div class="post-meta">
@@ -432,7 +439,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:09:11">2021-04-13</span>
+      <span class="publish-time" data-t="2021-06-02 00:50:21">2021-06-02</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -441,269 +448,14 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
-      </a>
+      <a href="https://rainylilysp.github.io/IUhEofUpV/">
+        <span>Behind the pain</span>
+      </a>、
       
       
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>31<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>9219<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="配对教授斯教授哈背景魔法世界au战后斯内普存活斯哈确定关系简介哈利有一个隐藏在内心深处的小秘密这次他终于决定说出口警告spanking情节pwp羞耻play角色扮演口交">配对：教授斯×教授哈<br>
-背景：魔法世界AU，战后，斯内普存活，斯哈确定关系<br>
-简介：哈利有一个隐藏在内心深处的小秘密，这次他终于决定说出口……<br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/naughty-boytao-qi-de-nan-hai/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
       
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/si-fen-zhi-yi-wang-zi-de-ri-ji/">
-      四分之一王子的日记
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:08:35">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>25<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>7253<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="配对教授斯教授哈背景成年儿童保护法世界线小阿不思上学可单独食用简介小阿不思这个年纪还看不懂自己写的日记也许等到他再长大一些就懂了警告spanking情节提及有含沙射影的xx暗示">配对：教授斯×教授哈<br>
-背景：《成年儿童保护法》世界线，小阿不思上学，可单独食用<br>
-简介：小阿不思这个年纪还看不懂自己写的日记，也许等到他再长大一些就懂了……<br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/si-fen-zhi-yi-wang-zi-de-ri-ji/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/te-shu-zhao-gu/">
-      特殊照顾
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:08:08">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>13<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>3599<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="上海卷世上许多重要的转折是在意想不到时发生的这是否意味着人对事物发展进程无能为力-请写一篇文章谈谈你对这个问题的认识和思考-要求1自拟题目2不少于800字">上海卷<br>
-世上许多重要的转折是在意想不到时发生的，这是否意味着人对事物发展进程无能为力？ 请写一篇文章，谈谈你对这个问题的认识和思考。<br>
-要求：(1)自拟题目；(2)不少于800字。</h2>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/te-shu-zhao-gu/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/bo-jue-fu-di-de-qing-chen/">
-      伯爵府邸的清晨
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:05:09">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
+      <a href="https://rainylilysp.github.io/jyU69YjU4/">
+        <span>短篇</span>
       </a>
       
       
@@ -717,631 +469,136 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2973<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>2867<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="关系管家斯少爷哈背景19世纪麻瓜au简介在阶级斗争中不幸被害的波特伯爵夫妇临终前将年仅12岁的独生少爷托付给了唯一信任的总管家西弗勒斯斯内普-由于怀疑家中佣人中有叛变者斯内普总管家解雇了所有的佣人仅仅留下了从小在府邸养大的17岁女佣艾琳娜来负责家务-在这种艰难的条件下斯内普管家不得不身兼数职负责小少爷哈利的日常起居和家庭教育-没错借了一些黑执事的设定因为它太香了警告sp训诫情节-漫无天际的ooc">关系：管家斯×少爷哈<br>
-背景：19世纪麻瓜AU<br>
-简介：在阶级斗争中不幸被害的波特伯爵夫妇，临终前将年仅12岁的独生少爷托付给了唯一信任的总管家西弗勒斯·斯内普。由于怀疑家中佣人中有叛变者，斯内普总管家解雇了所有的佣人，仅仅留下了从小在府邸养大的17岁女佣艾琳娜来负责家务。在这种艰难的条件下，斯内普管家不得不身兼数职，负责小少爷哈利的日常起居和家庭教育。（没错，借了一些黑执事的设定，因为它太香了）<br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/bo-jue-fu-di-de-qing-chen/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/xian-sheng-cao-tu-zi-ma/">
-      先生，艹兔子吗？
-    </a>
-  </h1>
-  <div class="post-meta">
     
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:02:54">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
     
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>24<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
+    <span id="/IoH-gIaI7/" data-flag-title="Behind the pain（14）" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>6946<span class="pc-show language" data-lan="words">字数</span></span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
     </span>
     
   </div>
 </section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="点梗always配对教授斯学生哈背景战后全员存活设定双向暗恋简介哈利通过猫头鹰购物得到了一样好东西并打算今晚就使用它警告半兽化哈利车">点梗：@Always<br>
-配对：教授斯×学生哈<br>
-背景：战后，全员存活设定，双向暗恋<br>
+            <div class="post-body next-md-body" id="post_body">
+              <p>“你在做无谓的坚持，男孩。”斯内普居高临下地俯视着哈利，他的嘴角弯成一个轻蔑的弧度，眼低透着令哈利浑身打颤的严厉，“要知道你现在遭受的一切苦难都是你咎由自取。”</p>
+<p>哈利没有说话，只是惊恐地看着斯内普，他的大脑乱成了一团。一方面他知道这是黑魔王派卢修斯来检查哈利的服从程度，如果他表现得对这个金发食死徒俯首帖耳，他和斯内普都会好过许多，他们的计划也可以稳步向前进行，但另一方面，他骨子里残存的最后一点破损不堪的尊严让他没办法做到这些——他本来应该是一个骄傲的格兰芬多的。</p>
+<p>一个微凉而滑腻的不明物体钻入哈利的后穴时他几乎尖叫，“停下！不！”含着泪花的绿色双眸因为恐惧而瞪圆，“求你！不要！”</p>
+<p>但求饶是徒劳的，那东西开始涨大并以一种令哈利癫狂的频率抽插起来，哈利的后穴在药物的作用下原本就已经分泌了过多的汁液，此刻则更加一发不可收拾了，那异物抽插时发出淫靡的水声。刚刚才释放过的哈利却在药物和羞耻心的作用下再次向顶峰推进。</p>
+<p>哈利抬起被泪水和汗水迷得朦胧的视线，用绝望的语调再次无声地乞求斯内普放过他。</p>
+<p>“你知道怎么做才能让你脱离现在的境况，宠物，”斯内普的眉头深皱着，“抵抗只会徒增你的痛苦。”</p>
+<p>哈利猛烈地摇着头，后穴里的凶器还肆虐着，似乎有意识一般准确无误地撞在哈利最敏感的一点上，狂暴的快感涌来，任凭怎么挣扎也无济于事，只有锁在脚踝上的铁链在与地面碰撞中叮当作响。</p>
+<p>【嗖——啪！】</p>
+<p>细直鞭抽打在大腿根处最柔软的皮肉上时哈利感受到耳边所有来自外界的声音都消失了，仅有高频率的心跳声和尖锐的呼吸声撞击着耳膜，他再一次轻易就达到了高潮，这个认知让他脑中的某根弦终于崩断，他发出连自己都无法听见的尖叫，绝望地释放。</p>
+<p>时间好像骤然慢了下来，塞德里克和小天狼星的最后一幕在哈利眼前闪过，接着是满脸痛苦的邓布利多、神色凝重的斯内普、面露担忧的朋友们……哈利不知道这是不是麻瓜们所说的濒死时人类会经历的走马灯，但他知道，在这场战役中自己绝对不是唯一一个牺牲者，虽然他们遭受的苦难各不相同，但守护自己爱的人俨然成了他们所有人心中最强的动力。</p>
+<p>“我很……抱歉……马尔福先生……”哈利听见自己颤抖着说，像一个乞求怜悯的卑微生物，“请你……请你……原谅我的冒失……”</p>
+<p>那些束缚哈利四肢的无形绳索松了力道，后穴里的折磨也随之被撤去，他脆弱地将自己在潮湿的地毯上蜷成一个团，身体还在药物的作用下严重发热，但同时也无法控制地打着寒颤。</p>
+<p>“你为什么不面对着我说这些呢？”卢修斯扬着恶意的音调，用皮鞋尖点了点面前的地毯，“用你好看的眼睛看着我，让我感受到你的诚意，这才是符合礼仪的。”</p>
+<p>哈利抬眼看了看斯内普，对方难以察觉地对他点了点头。</p>
+<p>他静静地呼吸了几秒钟，试图平复那些残留的快感和身体上的不适，然后拖着自己疼痛的身体来到卢修斯面前，抬起了略带失焦的目光。</p>
+<p>“我很抱歉，先生。”哈利小心翼翼地掩饰着自己所有的倔强和不服，这一切应该有个结束，而不是永远困在现状之中。他让自己的眼神和语调更加胆怯一些，而不是带着足以激怒对方的锋芒。“请你原谅我……”</p>
+<p>卢修斯从沙发前站起了身，捏住哈利的脸颊把他的头抬到一个不适的角度，“珍惜你现在的美好生活，宠物。”他微微弯腰，略长的发丝末端落在哈利的脸颊两边，“要知道西弗勒斯对待你简直是令人发指的仁慈。”</p>
+<p>哈利咬了咬嘴唇，强忍住被这男人触碰的厌恶感和再一次攻击的欲望，“是的……先生。”他咬牙切齿地说。</p>
+<p>卢修斯松开了手，顺势将哈利带到地上，转身与斯内普道别，“很遗憾不能留在这里欣赏完全程了，西弗勒斯。”他理了理自己华贵的长袍，“黑魔王还有别的事情需要我去做，他派我来查看你的进度，并有一个口信需要我来转达。”</p>
+<p>“哦？”斯内普的语调里透着些许好奇。</p>
+<p>“如你所知，关于魔法部的行动已经到了关键的时刻，最近几日我们的人手也逐渐不足，黑魔王希望你在不影响现有工作进度的同时参加接下来的行动，如果顺利的话，我们将在这周内夺取魔法部所有的控制权。”</p>
+<p>“麻烦你转达黑魔王，乐意之至，卢修斯。”斯内普微微颔首，哈利则因为卢修斯的即将离开而默默地松了一口气。</p>
+<p>“相信波特先生会度过难忘的一天的，不是嘛？”卢修斯拉开房门的时候轻笑了一声。</p>
+<p>“他会的。”斯内普回答道，将卢修斯送了出去并关上了门。</p>
+<p>哈利跪在原地，卢修斯的离开让他舒了一口气的同时，也开始仔细品味他刚才所说的一切——魔法部要沦陷了，斯内普将要出去参加食死徒的行动，这意味着他们的时间变得更加紧迫了。</p>
+<p>“给。”一个棕色的小瓶子被递到了哈利的面前，“虽然不是具有针对性的解药，不能完全缓解你的痛苦，但是会让你好受一点。”斯内普安静地说。</p>
+<p>哈利接过了解药，他什么也没问，就把那些药水都倒进了口中，即使臭烘烘的味道并不怎么好，他也毫无怨言地将它们咽了下去。正如斯内普所说的，不多久那些原本不属于他的燥热渐渐散去，随之而来的是无尽的疲惫感。</p>
+<p>“谢谢。”哈利低着头道谢，但是没有勇气去面对斯内普，他觉得斯内普会讥讽他，告诉他刚才他遭受的一切都是咎由自取，或者会表现出失望，痛斥他的冲动终究会毁了他们全部的计划。</p>
+<p>但是斯内普什么都没说，他沉默地坐进了距离最近的一张单人沙发中，表情十分凝重。</p>
+<p>在学校的时候，哈利很少看到斯内普展现出来像现在这样颓然痛苦的样子，这个男人好像永远都是一个邪恶的加害者，而现在他突然发现，斯内普也许并不是那么享受一个加害者的身份。</p>
+<p>他拖着疼痛的身躯，再次爬行至斯内普的脚边，顺从着内心深处一种冲动将自己轻轻靠在男人的小腿上。“你应该训斥我的。”哈利盯着眼前的地毯轻声说。“我的表现不够好……”</p>
+<p>“你没必要做到如此，波特。”斯内普的声音夹杂着沉重的叹息，“你就这么愿意做一个悲情的英雄吗？”</p>
+<p>哈利无声地笑了笑，摇了摇头。“我不愿意这么做。”哈利自嘲地苦笑，“但并不是所有的事情都会顺心如意，如果我一死了之，那么我不知道还有多少人要付出更加惨痛的代价。这是我的错误导致的，也应该由我来负责。”他顿了顿，将自己的头靠在了斯内普的膝头，“我想，你也是这样，先生。”</p>
+<p>回答他的是几秒钟沉默之后的一声叹息，一只大手穿过了哈利汗津津的乱发，轻轻地抚揉着。哈利缓缓闭上了眼睛，他的身体无处不在疼痛着，刚才的一番折磨也令他急需一些休息，但他还是强撑着保持，他知道现在并不是休息的时候。</p>
+<p>“我们的时间不多了，是吗？”他轻声问，感受着斯内普裤子上的纹路摩擦着自己疼痛的脸颊。</p>
+<p>“据我所知，魔法部之后的目标就是霍格沃茨。”斯内普的指尖穿过他的头皮时让哈利觉得这是世界上最好的良药，缓解了他近一半身体上的痛楚。“恐怕我们不能再等了。”</p>
+<p>“如果我们再进一步，我会看到他的记忆吗？”</p>
+<p>“我会尽量寻找最有用的信息。”斯内普显然知道哈利在担心什么，“但这不像直接对一个人摄神取念一样容易，所以——是的，你有可能看到他的任何记忆，包括十五年前戈德里克山谷那一晚的。”</p>
+<p>哈利没有说话，他的指尖缓缓触碰着斯内普的脚踝，大惊小怪地发现他的体温是温暖的。</p>
+<p>“你害怕了？”斯内普问道。</p>
+<p>哈利摇了摇头。“在我三年级面对摄魂怪的时候，我曾听见过他们的声音，所以我想这次我可以做好心理准备。从某种意义上来说，见到他们也不完全是一件坏事。”</p>
+<p>两人的对话一直断断续续地进行，因为他们双方都各怀心事，但在哈利发丝间抚摸的指尖一直没有停止动作。</p>
+<p>“这次恐怕我不能治愈你。”一段时间的沉默之后斯内普再次开口。</p>
+<p>“我明白。”哈利深深地呼吸了几口，“卢修斯·马尔福很有可能在接下来的几天随时来检查你的工作进度。”</p>
+<p>“你知道后面你将面对什么吗？”斯内普问，“在卢修斯之后。”</p>
+<p>哈利轻轻咬了咬嘴唇点点头，“我将会被带到伏地魔面前，向他展现出臣服。”</p>
+<p>“你能做到吗？”</p>
+<p>哈利感到自己胸口发闷，他无声地张开嘴巴呼吸想要排解这种感觉，“我逃不掉的。今天的教训让我知道，反抗只会让我们都更加痛苦，遭受到更多的折磨。”他的声音略带颤抖却不乏坚定，“所以，我能做到，也必须做到。”</p>
+<p>在他发间轻抚的指尖停顿了片刻，随后的动作更加轻柔和小心翼翼了。</p>
+<p>“你是我见过最勇敢的男孩，波特。”哈利听见斯内普沉重地夸赞道。</p>
+<p></p>
 
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/xian-sheng-cao-tu-zi-ma/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/sanctuarybi-nan-suo/">
-      Sanctuary（避难所）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:02:28">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>25<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>7251<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            </div>
             
             
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="配对教授斯学生哈背景最后一战进行时除了纳吉尼和哈利所有的魂器都被毁霍格沃茨师生坚守城堡但是伤亡惨重赢得胜利的机会越来越渺茫简介when-i-close-my-eyes-everything-will-be-alrighteverything-you-said-ill-keep-in-mind那些我们深爱的人从未离开-警告大量主要角色死亡某种意义上的be某种意义上的he">配对：教授斯×学生哈<br>
-背景：最后一战进行时，除了纳吉尼和哈利所有的魂器都被毁，霍格沃茨师生坚守城堡，但是伤亡惨重，赢得胜利的机会越来越渺茫……<br>
-简介：When I close my eyes, everything will be alright,everything you said I'll keep in mind.那些我们深爱的人从未离开。<br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/sanctuarybi-nan-suo/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/mao-de-bao-chou/">
-      猫的报仇
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:02:05">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>28<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>8267<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="配对教授斯小猫哈背景魔法世界au无伏地魔及其他除了斯哈之外的原著人物简介这个小猫变成的男孩说他是来报恩的但西弗勒斯完全不这么认为警告车">配对：教授斯×小猫哈<br>
-背景：魔法世界AU，无伏地魔及其他除了斯哈之外的原著人物<br>
-简介：这个小猫变成的男孩说他是来报恩的，但西弗勒斯完全不这么认为……<br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/mao-de-bao-chou/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/mao-de-bao-en/">
-      猫的报恩
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:01:44">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>14<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4019<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="配对教授斯小猫哈背景魔法世界au无伏地魔及其他除了斯哈之外的原著人物简介西弗勒斯样的黑猫变成了一个男孩子谁来告诉他这到底是怎么一回事警告无厘头轻sp训诫情节">配对：教授斯×小猫哈<br>
-背景：魔法世界AU，无伏地魔及其他除了斯哈之外的原著人物<br>
-简介：西弗勒斯样的黑猫变成了一个男孩子，谁来告诉他这到底是怎么一回事？！<br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/mao-de-bao-en/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/lun-li-shi-de-bi-ran-xing/">
-      论历史的必然性
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 19:00:49">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/r6FQ01pVC/">
-        <span>pwp</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>19<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>5521<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h2 id="配对教授斯学生斯毕业生哈非3p背景魔法世界au战后简介哈利想要改变自己惨痛的现状但却在使用了错误的道具之后遭遇了大祸警告年下斯sp训诫情节">配对：教授斯&amp;学生斯×毕业生哈（非3p）<br>
-背景：魔法世界AU，战后<br>
-简介：哈利想要改变自己惨痛的现状，但却在使用了错误的道具之后遭遇了大祸……<br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/lun-li-shi-de-bi-ran-xing/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-fan-wai-qi/">
-      漫无止境的八月（番外七）
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-04-13 18:58:00">2021-04-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://rainylilysp.github.io/LqPef3uR-/">
-        <span>中篇</span>
-      </a>、
-      
-      
-      
-      <a href="https://rainylilysp.github.io/1oBnZoVLJ/">
-        <span>【中篇】漫无止境的八月</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>19<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>5559<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><p><strong>番外七 暑假与新家</strong></p>
-<p>西弗勒斯在自己的办公桌前忙碌着，做最后的整理。他把那些需要带走的书本单独分出来，垒在办公桌的边缘。随着学期的结束，学生们的论文已经全部被发还至他们各自的手里，这使西弗勒斯的办公桌变得异常地空旷整洁。他将羽毛笔插在了笔架上，仔细地盖好了墨水瓶，然后将那些他不打算带走的书送回一旁的书架。</p>
-<p>办公室的门被无声地推开了。如果是之前，西弗勒斯一定会立即警觉起来，但此时，他依旧继续着手头的工作，头也没有抬一下。“你迟了，波特。”他检查了一下自己的书架，确认所有的书本都按照分类排列整齐，并给它们施了一个防护咒，这能保证他的书本在接下来的将近两个月的时间里不受外界的破坏——包括灰尘和任何不被允许的闯入者。“检查你的行李，我们将不会有折返的计划，如果你在出发之后发现忘记了什么，那么你只能等到新的学年开始之后才能再次拿到它。”</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://rainylilysp.github.io/man-wu-zhi-jing-de-ba-yue-fan-wai-qi/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
-    </div>
-  </article>
-  
-            
-            
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-      <li class="pagination-dir">
-        <a href="https://rainylilysp.github.io/page/10/">
-          <i class="fa fa-angle-left"></i>
-        </a>
-      </li>
-    
-    
-      <!-- 1 2 3 4 ... N -->
-      
-        <li class="pagination-li">
-          <a href="/">1</a>
-        </li>
-        <li class="pagination-li">
-          …
-        </li>
-        <li class="pagination-li">
-          <a href="/page/10">10</a>
-        </li>
-        <li class="pagination-li pagination-active">
-          <a href="/page/11">11</a>
-        </li>
-        <li class="pagination-li">
-          <a href="/page/12">12</a>
-        </li>
-        <li class="pagination-li">
-          …
-        </li>
-        <li class="pagination-li">
-          <a href="/page/19">19</a>
-        </li>
-      
-    
-    
-      <li class="pagination-dir">
-        <a href="/page/12">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </li>
-    
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      一只小雨莉
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://rainylilysp.github.io/IoH-gIaI7/" title="Behind the pain（14）">https://rainylilysp.github.io/IoH-gIaI7/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
   </ul>
+  <div class="tags">
+    
+      <a href="https://rainylilysp.github.io/IUhEofUpV/"># Behind the pain</a>
+    
+      <a href="https://rainylilysp.github.io/jyU69YjU4/"># 短篇</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="贿赂" href="https://rainylilysp.github.io/sB0uWiUaN/">贿赂</a>
+        <a class="nav-mobile-next" title="贿赂" href="https://rainylilysp.github.io/sB0uWiUaN/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
 </div>
-          </section>
+            
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '0a649590d1965ebdad12',
+    clientSecret: '9ec466e833ed983427912eeaac5c22ccd3df4987',
+    repo: 'rainylilysp.github.io',
+    owner: 'rainylilysp',
+    admin: ['rainylilysp'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -1548,6 +805,235 @@
     parent.insertBefore(aelem, next);
   })
 </script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+            <img id="zfb" class="reward-img" src="\media\images\custom-zfbImg.JPG" alt="赞赏码">
+          
+          
+            <img id="wx" class="reward-img" src="\media\images\custom-wxImg.JPG" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      <div id="zfbBtn" class="pay-text">
+        支付宝
+      </div>
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -20841,7 +20327,6 @@ A5本，预售版和掉落有烫银，黑白插画×4&lt;br&gt;
 
 
 <script src="/media/js/mouse/love.js"></script>
-
 
 
 
