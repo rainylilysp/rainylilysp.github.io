@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://rainylilysp.github.io</id>
     <title>Professor Please Spank Me</title>
-    <updated>2021-11-17T15:27:17.158Z</updated>
+    <updated>2021-11-19T14:25:21.574Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://rainylilysp.github.io"/>
     <link rel="self" href="https://rainylilysp.github.io/atom.xml"/>
@@ -11,6 +11,13 @@
     <logo>https://rainylilysp.github.io/images/avatar.png</logo>
     <icon>https://rainylilysp.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Professor Please Spank Me</rights>
+    <entry>
+        <title type="html"><![CDATA[星光（16）]]></title>
+        <id>https://rainylilysp.github.io/bZqEhHhST/</id>
+        <link href="https://rainylilysp.github.io/bZqEhHhST/">
+        </link>
+        <updated>2021-11-19T14:24:35.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[星光（15）]]></title>
         <id>https://rainylilysp.github.io/uiBdnZFKi/</id>
@@ -73,12 +80,5 @@
         <link href="https://rainylilysp.github.io/WVoz0DDxJ/">
         </link>
         <updated>2021-09-10T16:00:41.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[星光（07）]]></title>
-        <id>https://rainylilysp.github.io/u3r2Y6QM-/</id>
-        <link href="https://rainylilysp.github.io/u3r2Y6QM-/">
-        </link>
-        <updated>2021-09-06T14:22:37.000Z</updated>
     </entry>
 </feed>
